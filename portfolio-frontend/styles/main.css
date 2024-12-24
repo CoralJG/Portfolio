@@ -1,0 +1,156 @@
+/* Main CSS */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926');
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  background-color: #ffffff38;
+  color: white;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+main {
+  padding: 32px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Slider */
+.slider {
+  background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926');
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-28%);
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 330px;
+  height: 360px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Index */
+.index {
+  text-align: center;
+  margin-top: 100px auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.index ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.index li {
+  display: inline-block;
+  margin: 10px;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.index li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.index a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.index a:hover {
+  color: black;
+  font-size: 22px;
+  text-decoration: underline;
+  transition: color 0.3s, font-size 0.3s;
+}
+
+/* Footer */
+footer {
+  color: white;
+  padding: 40px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
