@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: cadetblue;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin: auto auto 40px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    background-color: cadetblue;
+    border-radius: 5px;
+    margin: auto 20px;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin: auto 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: auto 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: cadetblue;
+    color: white;
+    margin: auto 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(64, 106, 107);
+}
+
+.social-links {
+    text-align: center;
+    margin: 60px 0;
+    color: cadetblue;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.social-links a:hover {
+    scale: 1.5;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: cadetblue;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
