@@ -74,6 +74,11 @@ a:hover {
     margin: auto 0;
 }
 
+.certifications div:hover {
+    transform: translateY(-40px);
+    cursor: pointer;
+}
+
 .certifications p {
     flex: 1;
 }
