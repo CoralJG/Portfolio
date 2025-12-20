@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  title: "Coral | Pentester & FullStack | Nmap 90%",
+  title: "Portfolio Coral Jácome",
   description: "Especialista ethical hacking. Málaga/Remoto. Portfolio 2025.",
   urls: {
     site: "https://coraljg.netlify.app",
