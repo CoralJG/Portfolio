@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProfileCard from '../components/ProfileCard.astro';
+import ProfileSelector from '../components/ProfileSelector.astro';
+
+const { profile } = Astro.params;
+---
+
+<Layout title={`${profile} | CoralJG`}>
+  <ProfileSelector />
+  <ProfileCard profile={profile} />
+</Layout>

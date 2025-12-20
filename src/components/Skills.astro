@@ -1,0 +1,24 @@
+---
+export interface Props { skills: Array<{name: string; level: number; category: string;}>; }
+const { skills } = Astro.props;
+---
+
+<section id="skills" class="section">
+  <h2>Skills técnicas</h2>
+  <div class="grid">
+    {skills.map(skill => (
+      <div class="skill">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <div>
+            <strong style="font-size: 1.1rem;">{skill.name}</strong>
+            <span style="color: #5f6368; margin-left: 0.5rem;">({skill.category})</span>
+          </div>
+          <span style="font-size: 1.4rem; font-weight: 700; color: #1a73e8;">{skill.level}%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" style={`width: ${skill.level}%`}></div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+
+import { contentfulClient } from '../lib/contentful';
+import type { Skill, Project } from '../lib/types.ts';
+
+const [skillsRes, projectsRes] = await Promise.all([
+  contentfulClient.getEntries({ content_type: 'skill', limit: 6 }),
+  contentfulClient.getEntries({ content_type: 'project', limit: 6 })
+]);
+
+const skills: Skill[] = skillsRes.items.map(item => item.fields);
+const projects: Project[] = projectsRes.items.map(item => item.fields);
+---
+
+<Layout title="Proyectos | CoralJG">
+  <Skills skills={skills} />
+  <Projects projects={projects} />
+</Layout>

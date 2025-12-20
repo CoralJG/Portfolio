@@ -1,0 +1,32 @@
+---
+import Nav from '../components/Nav.astro';
+import { SITE_CONFIG } from '../lib/config.ts';
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  children: any;
+}
+
+const { title = SITE_CONFIG.title, children } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={SITE_CONFIG.description}>
+  <!-- SEO -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <Nav />
+  <main style="margin-top: 70px;">
+    <div class="container">
+      <slot />
+    </div>
+  </main>
+</body>
+</html>

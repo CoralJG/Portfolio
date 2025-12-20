@@ -1,0 +1,17 @@
+---
+import { SITE_CONFIG } from '../lib/config.ts';
+---
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo Izquierda -->
+    <a href="/" class="navbar-logo">
+      <span class="logo-text">CoralJG</span>
+    </a>
+    
+    <!-- CTA Derecha -->
+    <div class="navbar-actions">
+      <a href={SITE_CONFIG.urls.github} class="github-btn" target="_blank">GitHub</a>
+    </div>
+  </div>
+</nav>
