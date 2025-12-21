@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   title: "Portfolio Coral Jácome",
-  description: "Especialista ethical hacking. Málaga/Remoto. Portfolio 2025.",
+  description: "FullStack Developer studying cybersecurity. Málaga/Remote. Portfolio 2025.",
   urls: {
     site: "https://coraljg.netlify.app",
     demoUrl: "https://coraljg.netlify.app",

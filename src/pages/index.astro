@@ -1,22 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import WorldSelector from '../components/WorldSelector.astro';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import Spellbook from '../components/Spellbook.astro';
 import CTA from '../components/CTA.astro';
-import ProfileSelector from '../components/ProfileSelector.astro';
-
-import { contentfulClient } from '../lib/contentful';
-import { SITE_CONFIG } from '../lib/config.ts';
-import type { Hero as HeroType } from '../lib/types.ts';
-
-const heroRes = await contentfulClient.getEntries({ content_type: 'hero' });
-const hero: HeroType = heroRes.items[0]?.fields || {
-  title: 'Coral | Pentester',
-  subtitle: 'Ethical hacking Málaga',
-  ctaLabel: 'Ver Proyectos',
-  ctaUrl: '/proyectos'
-};
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title={SITE_CONFIG.title}>
-  <ProfileSelector />
+<Layout title="Coral Jácome Portfolio">
+  <Hero />
+  <WorldSelector />
+  <Projects />
+  <Skills />
+  <Spellbook />
+  <CTA/>
+  <Footer />
 </Layout>

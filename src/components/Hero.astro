@@ -1,14 +1,9 @@
 ---
-export interface Props {
-  hero: { title: string; subtitle: string; ctaLabel: string; ctaUrl: string; };
-}
-const { hero } = Astro.props;
 ---
-
-<section class="hero">
-  <h1>{hero.title}</h1>
-  <p style="font-size: 1.25rem; color: #5f6368; max-width: 600px; margin: 1.5rem auto 0; line-height: 1.6;">
-    {hero.subtitle}
-  </p>
-  <a href="#projects" class="cta">{hero.ctaLabel}</a>
+<section class="hero reveal">
+  <div class="hero-content">
+    <h1 class="hero-title">Coral Jácome</h1>
+    <p class="hero-subtitle">Fullstack Developer</p>
+    <a href="#worlds" class="cta-button">Select World</a>
+  </div>
 </section>

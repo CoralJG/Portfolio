@@ -1,21 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Projects from '../components/Projects.astro';
-import Skills from '../components/Skills.astro';
-
-import { contentfulClient } from '../lib/contentful';
-import type { Skill, Project } from '../lib/types.ts';
-
-const [skillsRes, projectsRes] = await Promise.all([
-  contentfulClient.getEntries({ content_type: 'skill', limit: 6 }),
-  contentfulClient.getEntries({ content_type: 'project', limit: 6 })
-]);
-
-const skills: Skill[] = skillsRes.items.map(item => item.fields);
-const projects: Project[] = projectsRes.items.map(item => item.fields);
 ---
-
-<Layout title="Proyectos | CoralJG">
-  <Skills skills={skills} />
-  <Projects projects={projects} />
-</Layout>
+<section class="projects-section reveal">
+  <div class="container">
+    <h2 class="section-title">Enchantments</h2>
+    <div class="project-grid">
+      <div class="enchantment-book">
+        <h3 class="project-title">HackTheBox CTFs</h3>
+        <p class="project-description">Advanced pentesting challenges with web exploitation, buffer overflows and privilege escalation</p>
+      </div>
+      <div class="enchantment-book">
+        <h3 class="project-title">SOC Automation</h3>
+        <p class="project-description">Python scripts for SIEM correlation and automated incident response workflows</p>
+      </div>
+      <div class="enchantment-book">
+        <h3 class="project-title">Web Security Scanner</h3>
+        <p class="project-description">Custom vulnerability scanner with OWASP Top 10 detection</p>
+      </div>
+      <div class="enchantment-book">
+        <h3 class="project-title">Web Security Scanner</h3>
+        <p class="project-description">Custom vulnerability scanner with OWASP Top 10 detection</p>
+      </div>
+    </div>
+  </div>
+</section>

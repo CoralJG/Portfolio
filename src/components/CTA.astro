@@ -1,28 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { SITE_CONFIG } from '../lib/config.ts';
 ---
-
-<Layout title="Contacto | CoralJG">
-  <section class="section" style="text-align: center; padding-top: 4rem;">
-    <h1 style="font-size: 3rem; margin-bottom: 2rem; color: #202124;">Contáctame</h1>
-    <div class="grid" style="max-width: 600px; margin: 0 auto;">
-      <div style="background: white; padding: 3rem; border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.1);">
-        <p style="font-size: 1.2rem; color: #5f6368; margin-bottom: 2rem;">
-          ¿Proyecto interesante? ¿Colaboración? ¡Escríbeme!
-        </p>
-        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-          <a href={`mailto:${SITE_CONFIG.urls.email}`} class="btn-github" style="width: 100%; justify-content: center;">
-            ✉️ Email directo
-          </a>
-          <a href={SITE_CONFIG.urls.linkedIn} class="btn-github" style="width: 100%; justify-content: center;">
-            💼 LinkedIn
-          </a>
-          <a href={SITE_CONFIG.urls.github} class="btn-github" style="width: 100%; justify-content: center;">
-            📂 GitHub
-          </a>
-        </div>
+<section class="contact-section reveal">
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Github</h3>
+        <a href="https://github.com/coraljg" class="github-btn">📂 Enlace</a>
+      </div>
+      <div class="contact-card">
+        <h3>LinkedIn</h3>
+        <a href="https://www.linkedin.com/in/coraljacomegarcia/" class="github-btn">💼 Enlace</a>
       </div>
     </div>
-  </section>
-</Layout>
+  </div>
+</section>
